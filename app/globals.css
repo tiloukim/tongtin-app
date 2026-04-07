@@ -1,26 +1,16 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+:root { --gold: #C9963A; --gold-light: #F0D9A8; --gold-pale: #FBF5E8; --ink: #1A1612; --muted: #8A7E6F; --border: #E8DFD0; --surface: #FDFAF5; --red: #C0392B; --green: #1A7A4A; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--surface); color: var(--ink); font-size: 15px; line-height: 1.6; }
+.btn { padding: 12px 20px; border-radius: 8px; font-size: 15px; font-weight: 600; border: none; width: 100%; cursor: pointer; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-gold { background: var(--gold); color: #fff; }
+.btn-outline { background: transparent; color: var(--gold); border: 1.5px solid var(--gold); }
+.input { width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 15px; color: var(--ink); background: var(--surface); outline: none; }
+.input:focus { border-color: var(--gold); }
+.card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.badge { display: inline-flex; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.badge-gold { background: var(--gold-pale); color: var(--gold); }
+.badge-green { background: #E8F5EE; color: var(--green); }
+.badge-red { background: #FCEBEB; color: #791F1F; }
+.label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500; display: block; margin-bottom: 6px; }
